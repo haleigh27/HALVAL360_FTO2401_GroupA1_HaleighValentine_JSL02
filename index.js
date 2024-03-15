@@ -25,7 +25,10 @@ const addNewGoal = () => {
 
     // Iterates through each existing goal and compares its text content with the new goal input value.
     for (let i = 0; i < goalItems.length; i++) {
-        if (goalItems[i].textContent.trim().toLowerCase() === goalInput.trim().toLowerCase()) {
+        const specialChar = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/g; // Defines special characters.
+        const goalItemFormatted = goalItems[i].textContent.trim().toLowerCase().replace(specialChar, ''); // Removes blank space, converts letters to lower case and removes special characters.
+
+        if (goalItemFormatted === goalInput.trim().toLowerCase().replace(specialChar, '')) {
             alert(`Goal already exists!`);
             return;
         }
