@@ -35,6 +35,11 @@ const addNewGoal = () => {
     const newGoal = document.createElement('li');
     newGoal.textContent = goalInput;
     goalList.appendChild(newGoal);
+
+    //Event listener to remove goal on click.
+    newGoal.addEventListener('click', () => {
+        goalList.removeChild(newGoal);
+    });
 };
 
 // Add event listener to the goal submit button
