@@ -25,7 +25,7 @@ const addNewGoal = () => {
 
     // Iterates through each existing goal and compares its text content with the new goal input value.
     for (let i = 0; i < goalItems.length; i++) {
-        if (goalItems[i].textContent === goalInput) {
+        if (goalItems[i].textContent.trim().toLowerCase() === goalInput.trim().toLowerCase()) {
             alert(`Goal already exists!`);
             return;
         }
