@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
     display: flex;
@@ -9,7 +10,7 @@ body, html {
     transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for background and color changes */
 }
 
-#watch-container { 
+#watch-container {
     border-radius: 50px;
     background: linear-gradient(145deg, #5f9ea0, #008b8b);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -41,12 +42,13 @@ button:hover {
     background-color: #20b2aa;
 }
 
-input[type="text"], form {
+input[type='text'],
+form {
     width: 100%;
     margin-top: 10px;
 }
 
-input[type="text"] {
+input[type='text'] {
     border: 2px solid #008b8b;
     border-radius: 20px;
     padding: 10px;
@@ -80,7 +82,7 @@ ul {
     color: #ccc;
 }
 
-.dark-theme input[type="text"] {
+.dark-theme input[type='text'] {
     background-color: #333;
     color: #ccc;
     border-color: #444;
@@ -90,9 +92,11 @@ ul {
     background: #444;
 }
 
-
 #welcomeMessage {
     font-size: 1.2em;
     font-weight: 600;
-    
+}
+
+#goalList li {
+    cursor: pointer;
 }
